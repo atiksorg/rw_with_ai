@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rabbit Simulation 2</title>
+    <title>Rabbit Simulation 2 2</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
     <style>
       body {
@@ -129,7 +129,7 @@ canvas {
             value="1000"
           />
         </div>
-        <button id="restartBtn">Restart Simulation 2</button>
+        <button id="restartBtn">Restart Simulation 2 2</button>
       </div>
       <div class="simulation-area">
         <canvas id="simulationCanvas"></canvas>
@@ -332,7 +332,7 @@ class Bot {
   }
 }
 
-// Simulation 2 variables
+// Simulation 2 2 variables
 let bots = [];
 let resources = {};
 let generation = 0;
@@ -350,7 +350,7 @@ function addResource(type, x = null, y = null) {
 
 let chart;
 
-function initSimulation 2() {
+function initSimulation 2 2() {
   canvas.width = BOT_SIZE * FIELD_SIZE;
   canvas.height = BOT_SIZE * FIELD_SIZE;
 
@@ -458,7 +458,7 @@ function nextGeneration() {
 
   const survivors = bots.filter(b => !b.dead).slice(0, SURVIVORS);
   if (survivors.length === 0) {
-    initSimulation 2();
+    initSimulation 2 2();
     return;
   }
 
@@ -502,14 +502,14 @@ function nextGeneration() {
   }
 
   if (generation >= MAX_GENERATIONS) {
-    endSimulation 2();
+    endSimulation 2 2();
   }
 }
 
-let isSimulation 2Running = true;
+let isSimulation 2 2Running = true;
 
-function updateSimulation 2() {
-  if (!isSimulation 2Running) {
+function updateSimulation 2 2() {
+  if (!isSimulation 2 2Running) {
     return;
   }
 
@@ -536,16 +536,16 @@ function updateSimulation 2() {
   }
 
   if (generation < MAX_GENERATIONS) {
-    animationFrameId = requestAnimationFrame(updateSimulation 2);
+    animationFrameId = requestAnimationFrame(updateSimulation 2 2);
   } else {
-    endSimulation 2();
+    endSimulation 2 2();
   }
 }
 
-function endSimulation 2() {
-  isSimulation 2Running = false;
+function endSimulation 2 2() {
+  isSimulation 2 2Running = false;
   cancelAnimationFrame(animationFrameId);
-  console.log("Simulation 2 ended after", generation, "generations");
+  console.log("Simulation 2 2 ended after", generation, "generations");
 
   // Update stats and chart one last time
   updateStats();
@@ -559,7 +559,7 @@ function endSimulation 2() {
   ctx.fillStyle = "white";
   ctx.font = "24px Arial";
   ctx.textAlign = "center";
-  ctx.fillText("Simulation 2 Ended", canvas.width / 2, canvas.height / 2);
+  ctx.fillText("Simulation 2 2 Ended", canvas.width / 2, canvas.height / 2);
 }
 
 // Add event listeners for the input fields
@@ -589,15 +589,15 @@ document.getElementById("maxGenerations").addEventListener("change", e => {
 
 // Add event listener for the restart button
 document.getElementById("restartBtn").addEventListener("click", () => {
-  isSimulation 2Running = false;
+  isSimulation 2 2Running = false;
   cancelAnimationFrame(animationFrameId);
-  initSimulation 2();
-  isSimulation 2Running = true;
-  animationFrameId = requestAnimationFrame(updateSimulation 2);
+  initSimulation 2 2();
+  isSimulation 2 2Running = true;
+  animationFrameId = requestAnimationFrame(updateSimulation 2 2);
 });
 
-initSimulation 2();
-animationFrameId = requestAnimationFrame(updateSimulation 2);
+initSimulation 2 2();
+animationFrameId = requestAnimationFrame(updateSimulation 2 2);
     </script>
   </body>
 </html>
